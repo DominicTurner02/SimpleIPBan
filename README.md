@@ -7,6 +7,8 @@ Commands:
 Configuration:
 
 KickReason - Allows you to add your own Kick Reason (Default: "You are IP Banned!")
+
 BannedIPs List:
+
 BannedIP - "000.00.00.000"
 
