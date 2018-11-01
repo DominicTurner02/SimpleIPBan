@@ -5,6 +5,6 @@
 **Commands**:
 /GetIP [Name or SteamID] - Gets the IP of a User.
 
-**Configuration:**
 
+**Configuration:**
 KickReason - Allows you to add your own Kick Reason (Default: "You are IP Banned!")
