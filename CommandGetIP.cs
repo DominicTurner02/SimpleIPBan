@@ -32,15 +32,14 @@ namespace SimpleIPBan
                     catch
                     {
                         UnturnedChat.Say(caller, "User not found!", Color.red);
-                        Skip = true;
+                        return;
                     }
 
-                    if (!Skip)
-                    {
-                        UnturnedChat.Say(caller, $"{Victim.DisplayName}'s IP is: {Victim.IP}", Color.yellow);
-                        Logger.LogWarning($"{Victim.DisplayName}'s IP is: {Victim.IP}");
-                       
-                    }
+
+                    UnturnedChat.Say(caller, $"{Victim.DisplayName}'s IP is: {Victim.IP}", Color.yellow);
+                    Logger.LogWarning($"{Victim.DisplayName}'s IP is: {Victim.IP}");
+                
+
                 } else
                 {
                     UnturnedChat.Say(caller, "Incorrect Usage: /GetIP [Name || SteamID]", Color.red);
