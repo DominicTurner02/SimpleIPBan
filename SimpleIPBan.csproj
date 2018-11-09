@@ -62,6 +62,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandGetIP.cs" />
+    <Compile Include="CommandIPBan.cs" />
+    <Compile Include="CommandIPList.cs" />
+    <Compile Include="CommandIPReload.cs" />
     <Compile Include="ConfigurationSimpleIPBan.cs" />
     <Compile Include="SimpleIPBan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
