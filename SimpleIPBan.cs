@@ -120,6 +120,24 @@ namespace SimpleIPBan
         }
 
 
+        public void RemoveIP(IRocketPlayer rCaller, string IP)
+        {
+            try
+            {
+                JArray IPArray = JArray.Parse(File.ReadAllText("Plugins/SimpleIPBan/IPBlacklist.json"));
+                IPArray.Remove(IP);
+                File.WriteAllText("Plugins/SimpleIPBan/IPBlacklist.json", IPArray.ToString());
+                BlacklistedIPs.Remove(IP);
+                UnturnedChat.Say(rCaller, $"Successfully removed {IP} from the blacklist.");
+                Logger.LogWarning($"{IP} has been removed from the blacklist!");
+            }
+            catch (Exception ex)
+            {
+                UnturnedChat.Say(rCaller, "There was an issue running this command. Please check your Rocket.log and contact the Author for support. \n");
+                Logger.LogError($"ERROR: {ex}");
+            }
+        }
+
         public void AddPlayerIP(IRocketPlayer Caller, UnturnedPlayer Victim, string IP)
         {
 
