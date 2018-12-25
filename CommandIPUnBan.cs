@@ -19,7 +19,7 @@ namespace SimpleIPBan
 
         public void Execute(IRocketPlayer rCaller, params string[] Command)
         {
-            if (Command.Length > 0)
+            if (Command.Length > 1)
             {
                 UnturnedChat.Say(rCaller, $"/IPUnban {Syntax}", Color.red);
                 return;
@@ -28,8 +28,6 @@ namespace SimpleIPBan
             if (SimpleIPBan.Instance.BlacklistedIPs.Contains(Command[0]))
             {
                 SimpleIPBan.Instance.RemoveIP(rCaller, Command[0]);
-
-
             }
 
 
