@@ -23,7 +23,6 @@ namespace SimpleIPBan
             {
                 if (command.Length != 0 || command.Length <= 1)
                 {
-                    bool Skip = new bool();
                     UnturnedPlayer Victim = null;
                     try
                     {

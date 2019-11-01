@@ -138,7 +138,7 @@ namespace SimpleIPBan
             }
         }
 
-        public void AddPlayerIP(IRocketPlayer Caller, UnturnedPlayer Victim, string IP)
+        public void AddPlayerIP(IRocketPlayer Caller, UnturnedPlayer Victim)
         {
 
             try

@@ -80,7 +80,7 @@ namespace SimpleIPBan
                     {
                         if (!SimpleIPBan.Instance.BlacklistedIPs.Contains(IP))
                         {
-                            SimpleIPBan.Instance.AddPlayerIP(caller, Victim, IP);
+                            SimpleIPBan.Instance.AddPlayerIP(caller, Victim);
                         } else
                         {
                             UnturnedChat.Say(caller, "IP already in blacklist.", Color.red);
